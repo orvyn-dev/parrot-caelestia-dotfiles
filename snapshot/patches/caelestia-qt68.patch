@@ -1,0 +1,115 @@
+diff --git a/components/effects/Elevation.qml b/components/effects/Elevation.qml
+--- a/components/effects/Elevation.qml
++++ b/components/effects/Elevation.qml
+@@ -3,16 +3,41 @@
+ import QtQuick
+ import QtQuick.Effects
+ 
+-RectangularShadow {
++Item {
++    id: root
++
+     property int level
+     property real dp: [0, 1, 3, 6, 8, 12][level]
+-
+-    color: Qt.alpha(Colours.palette.m3shadow, 0.7)
+-    blur: (dp * 5) ** 0.7
+-    spread: -dp * 0.3 + (dp * 0.1) ** 2
+-    offset.y: dp / 2
++    property real radius: 0
++    property color color: Qt.alpha(Colours.palette.m3shadow, 0.7)
++    property real blur: (dp * 5) ** 0.7
++    property real spread: -dp * 0.3 + (dp * 0.1) ** 2
++    property vector2d offset: Qt.vector2d(0, dp / 2)
+ 
+     Behavior on dp {
+         Anim {}
+     }
++
++    Rectangle {
++        id: shadowShape
++
++        x: -root.spread + root.offset.x
++        y: -root.spread + root.offset.y
++        width: Math.max(0, root.width + 2 * root.spread)
++        height: Math.max(0, root.height + 2 * root.spread)
++        radius: Math.max(0, root.radius + root.spread)
++        color: root.color
++        antialiasing: true
++        visible: false
++        layer.enabled: true
++    }
++
++    MultiEffect {
++        anchors.fill: shadowShape
++        source: shadowShape
++        blurEnabled: true
++        blurMax: 24
++        blur: Math.max(0, Math.min(1, root.blur / blurMax))
++        autoPaddingEnabled: true
++    }
+ }
+diff --git a/modules/bar/Bar.qml b/modules/bar/Bar.qml
+--- a/modules/bar/Bar.qml
++++ b/modules/bar/Bar.qml
+@@ -1,5 +1,6 @@
+ pragma ComponentBehavior: Bound
+ 
++import Qt.labs.qmlmodels
+ import qs.services
+ import qs.config
+ import "popouts" as BarPopouts
+diff --git a/services/Network.qml b/services/Network.qml
+--- a/services/Network.qml
++++ b/services/Network.qml
+@@ -53,11 +53,7 @@
+         id: wifiStatusProc
+ 
+         running: true
+-        command: ["nmcli", "radio", "wifi"]
+-        environment: ({
+-                LANG: "C.UTF-8",
+-                LC_ALL: "C.UTF-8"
+-            })
++        command: ["env", "LANG=C.UTF-8", "LC_ALL=C.UTF-8", "nmcli", "radio", "wifi"]
+         stdout: StdioCollector {
+             onStreamFinished: {
+                 root.wifiEnabled = text.trim() === "enabled";
+@@ -106,11 +102,7 @@
+         id: getNetworks
+ 
+         running: true
+-        command: ["nmcli", "-g", "ACTIVE,SIGNAL,FREQ,SSID,BSSID,SECURITY", "d", "w"]
+-        environment: ({
+-                LANG: "C.UTF-8",
+-                LC_ALL: "C.UTF-8"
+-            })
++        command: ["env", "LANG=C.UTF-8", "LC_ALL=C.UTF-8", "nmcli", "-g", "ACTIVE,SIGNAL,FREQ,SSID,BSSID,SECURITY", "d", "w"]
+         stdout: StdioCollector {
+             onStreamFinished: {
+                 const PLACEHOLDER = "STRINGWHICHHOPEFULLYWONTBEUSED";
+diff --git a/services/SystemUsage.qml b/services/SystemUsage.qml
+--- a/services/SystemUsage.qml
++++ b/services/SystemUsage.qml
+@@ -144,7 +144,7 @@
+         id: gpuTypeCheck
+ 
+         running: !Config.services.gpuType
+-        command: ["sh", "-c", "if command -v nvidia-smi &>/dev/null && nvidia-smi -L &>/dev/null; then echo NVIDIA; elif ls /sys/class/drm/card*/device/gpu_busy_percent 2>/dev/null | grep -q .; then echo GENERIC; else echo NONE; fi"]
++        command: ["sh", "-c", "if command -v nvidia-smi >/dev/null 2>&1 && nvidia-smi -L >/dev/null 2>&1; then echo NVIDIA; elif ls /sys/class/drm/card*/device/gpu_busy_percent 2>/dev/null | grep -q .; then echo GENERIC; else echo NONE; fi"]
+         stdout: StdioCollector {
+             onStreamFinished: root.autoGpuType = text.trim()
+         }
+@@ -175,11 +175,7 @@
+     Process {
+         id: sensors
+ 
+-        command: ["sensors"]
+-        environment: ({
+-                LANG: "C.UTF-8",
+-                LC_ALL: "C.UTF-8"
+-            })
++        command: ["env", "LANG=C.UTF-8", "LC_ALL=C.UTF-8", "sensors"]
+         stdout: StdioCollector {
+             onStreamFinished: {
+                 let cpuTemp = text.match(/(?:Package id [0-9]+|Tdie):\s+((\+|-)[0-9.]+)(°| )C/);

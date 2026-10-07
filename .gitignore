@@ -1,0 +1,42 @@
+# Compiled output and downloaded source trees
+build/
+_build/
+_sources/
+*.o
+*.a
+*.so
+*.so.*
+*.qsb
+__pycache__/
+*.pyc
+.venv/
+
+# Local archives, backups, and runtime state
+*.zip
+*.tar
+*.tar.gz
+*.tgz
+*.log
+*.qslog
+*.before-*
+*.qt68-original
+*.qt69-original
+snapshot-before-*/
+restore-backups/
+.cache/
+.local/state/
+
+# Private material is outside the export allowlist
+.env
+.env.*
+*.pem
+*.key
+.ssh/
+.gnupg/
+credentials*
+secrets*
+.face
+
+# Desktop file manager metadata
+.DS_Store
+.directory

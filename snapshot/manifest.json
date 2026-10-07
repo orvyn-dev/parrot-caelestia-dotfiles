@@ -1,0 +1,149 @@
+{
+  "exported_at_utc": "2026-10-06T23:27:16.480395+00:00",
+  "record_type": "actual laptop export",
+  "caelestia_baseline_tag": "v1.1.1",
+  "caelestia_baseline_commit": "e405bf8d5a442cf6ccf7e8c87c0523dc671c6063",
+  "qml_patch_files": [
+    "components/effects/Elevation.qml",
+    "modules/bar/Bar.qml",
+    "services/Network.qml",
+    "services/SystemUsage.qml"
+  ],
+  "qml_deleted_files": [],
+  "include_terminal": true,
+  "versions": {
+    "hyprland": "Hyprland 0.55.2 built from branch v0.55.2 at commit 39d7e209c79d451efab1b21151d5938289da838d clean (version: bump to 0.55.2).\nDate: Sat May 16 12:59:19 2026\nTag: v0.55.2, commits: 7319\n\nLibraries:\nHyprgraphics: built against 0.5.1, system has unknown\nHyprutils: built against 0.13.1, system has unknown\nHyprcursor: built against 0.1.13, system has unknown\nHyprlang: built against 0.6.8, system has unknown\nAquamarine: built against 0.11.0, system has unknown\n\nVersion ABI string: 39d7e209c79d451efab1b21151d5938289da838d_aq_0.11_hu_0.13_hg_0.5_hc_0.1_hlg_0.6\nno flags were set",
+    "quickshell": "Quickshell 0.3.1 (revision 11ca60be22b063478ed9586ca1d7f92f0f261caf, distributed by Local build on Parrot)",
+    "caelestia_cli": "Packages: not on Arch\n\nDots: not installed\n\nShell:\n    caelestia-shell 1.1.1, revision e405bf8d5a442cf6ccf7e8c87c0523dc671c6063, distrubuted by: Local build on Parrot\n\nQuickshell:\n    Quickshell 0.3.1 (revision 11ca60be22b063478ed9586ca1d7f92f0f261caf, distributed by Local build on Parrot)\n\nLocal copy of shell found:\n    Last merged upstream commit: unknown\n    Last local commit: unknown",
+    "qt_version": "6.8.2",
+    "qt_qml_directory": "/usr/lib/x86_64-linux-gnu/qt6/qml",
+    "rubik_font": "Rubik,Rubik Light",
+    "material_font": "Material Symbols Rounded",
+    "monospace_font": "Noto Sans"
+  },
+  "sources": {
+    "quickshell": {
+      "upstream": "https://github.com/quickshell-mirror/quickshell.git",
+      "checkout_present": true,
+      "checkout_commit": "11ca60be22b063478ed9586ca1d7f92f0f261caf",
+      "tracked_checkout_changes": false,
+      "cmake_settings": {
+        "CMAKE_BUILD_TYPE": "RelWithDebInfo",
+        "CMAKE_INSTALL_INCLUDEDIR": "include",
+        "CMAKE_INSTALL_LIBDIR": "lib",
+        "CMAKE_INSTALL_PREFIX": "/usr/local",
+        "DISTRIBUTOR": "Local build on Parrot",
+        "INSTALL_QMLDIR": "",
+        "INSTALL_QML_PREFIX": "",
+        "VENDOR_CPPTRACE": "ON",
+        "X11": "OFF"
+      }
+    },
+    "caelestia-shell": {
+      "upstream": "https://github.com/caelestia-dots/shell.git",
+      "checkout_present": true,
+      "checkout_commit": "e405bf8d5a442cf6ccf7e8c87c0523dc671c6063",
+      "tracked_checkout_changes": true,
+      "cmake_settings": {
+        "CMAKE_BUILD_TYPE": "Release",
+        "CMAKE_INSTALL_INCLUDEDIR": "include",
+        "CMAKE_INSTALL_LIBDIR": "lib",
+        "CMAKE_INSTALL_PREFIX": "/",
+        "CMAKE_INSTALL_RPATH": "$ORIGIN",
+        "DISTRIBUTOR": "Local build on Parrot",
+        "ENABLE_MODULES": "assets;plugin;shell",
+        "INSTALL_LIBDIR": "usr/lib/caelestia",
+        "INSTALL_QMLDIR": "/usr/lib/x86_64-linux-gnu/qt6/qml",
+        "INSTALL_QSCONFDIR": "$HOME/.config/quickshell/caelestia"
+      }
+    },
+    "caelestia-cli": {
+      "upstream": "https://github.com/caelestia-dots/cli.git",
+      "checkout_present": true,
+      "checkout_commit": "6f73a0131903b58600ef6205de423884b384a7ae",
+      "tracked_checkout_changes": false,
+      "cmake_settings": {}
+    },
+    "m3shapes": {
+      "upstream": "https://github.com/soramanew/m3shapes.git",
+      "checkout_present": true,
+      "checkout_commit": "8a6fe8961749887d677700b6508e0c9249968b7e",
+      "tracked_checkout_changes": false,
+      "cmake_settings": {
+        "CMAKE_BUILD_TYPE": "Release",
+        "CMAKE_INSTALL_INCLUDEDIR": "usr/local/include",
+        "CMAKE_INSTALL_LIBDIR": "usr/local/lib",
+        "CMAKE_INSTALL_PREFIX": "/",
+        "INSTALL_QMLDIR": "/usr/lib/x86_64-linux-gnu/qt6/qml"
+      }
+    },
+    "libcava": {
+      "upstream": "https://github.com/LukashonakV/cava.git",
+      "checkout_present": true,
+      "checkout_commit": "f03278ef9e5e7948fb206453d2f02758f8db216c",
+      "tracked_checkout_changes": false,
+      "cmake_settings": {}
+    }
+  },
+  "font_sha256": {
+    "MaterialSymbolsRounded.ttf": "95b24392bb49efd1bc3e92cff4e2452ad094461bab7c97e7d8723fab97e330ca",
+    "Rubik.ttf": "1b3a7437ba2af80e465e773ed60c5036d1ba6ace492d89046dbcf18fb31e4e88"
+  },
+  "files_sha256": {
+    "config/caelestia/cli.json": "7d04291842dc8eeb75f408179182c732da44c341132d022cee2ad24af2ad0c79",
+    "config/caelestia/shell.json": "50b4290a1f0f95d6948b8d4c987a05d6348fd59311410c9072e3c6a75ca2cc51",
+    "config/hypr/hyprland.lua": "7d4f00330ab8312f392512889b27da1026ea34869cfcbb66c01e8adae0f38803",
+    "licenses/Caelestia-LICENSE": "3972dc9744f6499f0f9b2dbf76696f2ae7ad8af9b23dde66d6af86c9dfb36986",
+    "overrides/quickshell/caelestia/components/effects/Elevation.qml": "98c09aedbf807d2b9ec27c7f689c1af237ce0b777bd00651d0265bec2e542d8b",
+    "overrides/quickshell/caelestia/modules/bar/Bar.qml": "fead185178497ee26b3ae428959f577a91fd85bcecc8cc8042bf488cc00b727a",
+    "overrides/quickshell/caelestia/services/Network.qml": "17d952e84dc65445bbbb2d06cc2b4ad1409ebd81674f5e897a3d9913b5b03930",
+    "overrides/quickshell/caelestia/services/SystemUsage.qml": "6ae55a2a6ddb21caaea967fc5d20dbaeeb5ed0ffbe89d633f8b3890925c20415",
+    "packages.tsv": "0f6a74c43e6e30ec0915f126380c42c632432df978300957728fb13729834c8c",
+    "patches/caelestia-qt68.patch": "8ae9827b32296aabd634fa9e946d8cfc335cbfd8e57f62006bff601949940f33",
+    "terminal/config/konsolerc": "e5566481a34630f13e3188c48cf8b0a6995044b1dd5017d48cca65851f3917c7",
+    "terminal/config/zsh/.zshenv": "c12aed2e9a5057b3c526ddb9f89af11467fef2049e12fb73d3cd06c1fa1e8755",
+    "terminal/config/zsh/.zshrc": "d9c99c5f770be55926d8d1cd4a11825b00866783ca6c63cfc7c7b4a91a988496",
+    "terminal/config/zsh/LICENSE": "495687b622414e731505b3e0b5730951369311efacee8847b94a1c7bdbdef5ab",
+    "terminal/config/zsh/aliases.zsh": "5122b1694dd8346d3002d719f96c9ddc947bf1a82e73a8ab5db874acc75148fe",
+    "terminal/config/zsh/bindings.zsh": "12bf04a18a653269ebe8c6efa5b9a7b17ee8793511fb5739a5e11da637dec58a",
+    "terminal/config/zsh/fzf.zsh": "93a1423b6cf88aab91e332534195a38e5fb0e67ca4851e30b4c35365eae0cc2d",
+    "terminal/config/zsh/plugins/fast-syntax-highlighting/LICENSE": "d93613ab64193aec4a48bc946c9f7408fcba44c6ea44af825ae7ae312264c0fe",
+    "terminal/config/zsh/plugins/fast-syntax-highlighting/README.md": "b276b964b845494589b6564dd8c47e4e62c81e3cf0f613eecc3f758a824e6c58",
+    "terminal/config/zsh/plugins/fast-syntax-highlighting/fast-syntax-highlighting.plugin.zsh": "19167193747abbbf68d5b4248b2d2e3b90777d910b1f4c5f1918bf227676b03c",
+    "terminal/config/zsh/plugins/fast-syntax-highlighting/share/free_theme.zsh": "770b6f32eb91f7f71a8da8ec55674f48f3d0aaae6b1344ccfa672181ed82d3be",
+    "terminal/config/zsh/plugins/fast-syntax-highlighting/test/parse.zsh": "aa095afe3a674aa3bef6ae15520c901f649e8893b1e61a0a53004fd02518098b",
+    "terminal/config/zsh/plugins/fast-syntax-highlighting/test/to-parse.zsh": "4a0d293e83ff3c41d53e2b71c0c6d158180dfeb42f23acd6e5150a1fadb86fe9",
+    "terminal/config/zsh/plugins/zsh-autosuggestions/LICENSE": "4598a6be0b8d7f2b708da5259d2a30d4e15e59b3c66781bab9e27744a9f859d8",
+    "terminal/config/zsh/plugins/zsh-autosuggestions/README.md": "07e006d374bebd600af168635db6b5250d4a329347038de6e05af0b35154c635",
+    "terminal/config/zsh/plugins/zsh-autosuggestions/src/async.zsh": "27f7ec800bd13b954f65deaf656cdeaaec058681a15b0cb62eaef5700c1fbc7d",
+    "terminal/config/zsh/plugins/zsh-autosuggestions/src/bind.zsh": "937cb8d17687cde6b2ab78398982177b86e05db17c51a0f8f98808ef8c6d33a6",
+    "terminal/config/zsh/plugins/zsh-autosuggestions/src/config.zsh": "23491f42e719e5a2c922286685e4216588922cab1d2823d1647ed9dd4a65e15e",
+    "terminal/config/zsh/plugins/zsh-autosuggestions/src/fetch.zsh": "10c453b06749447058075822c49476ea4988cf69a8408cea3ac74ef30e2f08e3",
+    "terminal/config/zsh/plugins/zsh-autosuggestions/src/highlight.zsh": "099bb4db5b50f23f371668df8ce0bfe7f83d95f7cda951e273213fb24dd54f66",
+    "terminal/config/zsh/plugins/zsh-autosuggestions/src/start.zsh": "effb648594bb7430a5900849bc645aeb29b61686c9aae4a9d40593c08f8213f8",
+    "terminal/config/zsh/plugins/zsh-autosuggestions/src/strategies/completion.zsh": "b96ea8591fe1fed5f618f6af199b2a270d7bb06129ff84368dcb9c847882dac4",
+    "terminal/config/zsh/plugins/zsh-autosuggestions/src/strategies/history.zsh": "73ee996abaa6ca26f280f6fa914664d121139d8d2600577d45f0003b6466d468",
+    "terminal/config/zsh/plugins/zsh-autosuggestions/src/strategies/match_prev_cmd.zsh": "27fc5f75c125c8d5d3a2d034b0e6a215d3483dcd9c3e850ed1eb409406ff2a97",
+    "terminal/config/zsh/plugins/zsh-autosuggestions/src/util.zsh": "d0b824df3b74b9382de0633609c24202625964814dad4d8540f1bd561b37726a",
+    "terminal/config/zsh/plugins/zsh-autosuggestions/src/widgets.zsh": "5e87d4e6c282e8057f745e730743851b6071ab2cb30f3f21ce65385a13f3bca8",
+    "terminal/config/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.plugin.zsh": "70ade54608660b10a0039eefbd3f8f98b92875c0ce53959174a7c7442eecc9d4",
+    "terminal/config/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh": "eec7ba8f7a71414ace0ea0fab0908d005b24cf65d83b169c0ff97815d3cfc51a",
+    "terminal/config/zsh/plugins/zsh-history-substring-search/README.md": "0e9bbbbdf76fc1ef8a6a91eb8e4517d3150d7966f123bd19b9783d792b7cb034",
+    "terminal/config/zsh/plugins/zsh-history-substring-search/zsh-history-substring-search.plugin.zsh": "edceeaa69a05796201aa064c549a85bc4961cc676efcf9c94c02ec0a4867542b",
+    "terminal/config/zsh/plugins/zsh-history-substring-search/zsh-history-substring-search.zsh": "0b864862a3b48992d7316cc7e585a1315fa389d730c17bf16e2f2bd5918089f3",
+    "terminal/config/zsh/plugins/zsh-vi-mode/LICENSE": "01bd0840e341ee5e91f9d4ef341a3edc3a953af905d278af70896bf9d3082e7d",
+    "terminal/config/zsh/plugins/zsh-vi-mode/README.md": "11468fead8ab9269f86fb1019dd446ab17da560f354a81fb987182f6733010c6",
+    "terminal/config/zsh/plugins/zsh-vi-mode/zsh-vi-mode.plugin.zsh": "07cbaaea520872f2e05a9ef754e54170c9a5efc52ccb733cb45f925f95954bad",
+    "terminal/config/zsh/plugins/zsh-vi-mode/zsh-vi-mode.zsh": "3b9a1971baa17f173ee3fc74e58ed8ebdb856f356cb830476c29d558b9c62e22",
+    "terminal/config/zsh/plugins.zsh": "af55d63231c1f75265bb1c0b46c96cf6d2946251489f65f77e9a685a8e241954",
+    "terminal/config/zsh/prompt.zsh": "737d3f719fe2704eb925929512b23af096e7505a7c45d9c6d95c951c0fae57dc",
+    "terminal/local-share/konsole/GreenOnBlack.colorscheme": "8cc4af475cced751b2640b496536c69edbf25370bc745c887d6e392c05d62e56",
+    "terminal/local-share/konsole/Parrot.profile": "d18888a447fb5d06548a62cae7ea9371bc8b34202b4410858b3c09680bd726b3",
+    "terminal/local-share/konsole/Solarized.colorscheme": "ba2038782ed138087f5e6b1aca7d831d3db5277db179f361240c26c4ee1594ad"
+  },
+  "notes": [
+    "Source checkout commits and installed binary versions are separate observations.",
+    "Only selected dotfiles, QML differences, and dependency metadata were exported.",
+    "Wallpaper images, .face, credentials, logs, and runtime state are not exported."
+  ]
+}

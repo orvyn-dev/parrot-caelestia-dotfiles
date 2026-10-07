@@ -1,0 +1,58 @@
+{
+  "recorded_date": "2026-10-07",
+  "record_type": "versions observed in the setup conversation; not a live machine export",
+  "system": {
+    "distribution": "Parrot 7 Echo",
+    "architecture": "amd64",
+    "original_desktop": "KDE Plasma on Wayland",
+    "compositor": "Hyprland 0.55.2",
+    "gpu": "Intel UHD Graphics 620",
+    "gpu_driver": "i915",
+    "qt": "6.8.2",
+    "terminal": "Konsole",
+    "interactive_shell": "zsh"
+  },
+  "sources": {
+    "quickshell": {
+      "url": "https://github.com/quickshell-mirror/quickshell.git",
+      "version": "0.3.1",
+      "commit": "11ca60be22b063478ed9586ca1d7f92f0f261caf",
+      "install_prefix": "/usr/local"
+    },
+    "caelestia-shell": {
+      "url": "https://github.com/caelestia-dots/shell.git",
+      "tag": "v1.1.1",
+      "commit_prefix": "e405bf8d",
+      "config_directory": "$HOME/.config/quickshell/caelestia"
+    },
+    "caelestia-cli": {
+      "url": "https://github.com/caelestia-dots/cli.git",
+      "commit": null,
+      "note": "Capture the checkout and installed version with the export script."
+    },
+    "m3shapes": {
+      "url": "https://github.com/soramanew/m3shapes.git",
+      "commit": null,
+      "note": "Build and installation succeeded; checkout commit was not pasted."
+    },
+    "libcava": {
+      "url": "https://github.com/LukashonakV/cava.git",
+      "version": "1.0.0",
+      "commit": null,
+      "note": "Capture the checkout commit with the export script."
+    }
+  },
+  "observed_dependencies": {
+    "wayland-protocols": "1.47-1~bpo13+1",
+    "libgbm-dev": "26.1.6-1~bpo13+1",
+    "libpipewire-0.3-dev": "1.6.9-2~bpo13+1",
+    "libxkbcommon-dev": "1.13.1-1~bpo13+1",
+    "libcurl4-gnutls-dev": "8.21.0-2~bpo13+1",
+    "libqalculate": "5.5.2",
+    "aubio": "0.4.9",
+    "cmake": "3.31.6",
+    "ninja": "1.12.1",
+    "meson": "1.7.0",
+    "gcc": "14.2.0"
+  }
+}

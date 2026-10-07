@@ -191,3 +191,7 @@ The reference compatibility code is derived from Caelestia and is distributed
 under GNU GPL version 3. See [LICENSE](LICENSE) and
 [THIRD_PARTY.md](THIRD_PARTY.md). The export copies Caelestia's upstream
 license into the snapshot alongside the QML patch.
+
+## Uninstall
+
+Caelestia was removed on 7 October 2026. See [Uninstall instructions](docs/UNINSTALL.md).

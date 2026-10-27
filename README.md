@@ -195,3 +195,7 @@ license into the snapshot alongside the QML patch.
 ## Uninstall
 
 Caelestia was removed on 7 October 2026. See [Uninstall instructions](docs/UNINSTALL.md).
+
+## Windows dual-boot drive mounting
+
+For restoring the Windows NTFS partition at `/mnt/windows-drive` after a Parrot OS reinstall, see [Windows NTFS auto-mount guide](docs/WINDOWS-NTFS-MOUNT.md) and [reusable setup script](scripts/setup-windows-drive.sh). This is separate from the desktop/Caelestia restoration process.
